@@ -55,6 +55,7 @@ TLDR:   Missing Upsert Logic, Database Connections,
 ## Follow-up Questions
 
 1.  Prompt:
+
             I am reviewing a Flask PR for a webhook endpoint. Below are
             the code and the requirements. Think like a senior engineer
             and indentify security vulnerabilities and logic errors.
@@ -74,7 +75,8 @@ TLDR:   Missing Upsert Logic, Database Connections,
         building off of this one.
     -   I didn't change my approach.
 
-2.  Prompt:
+3.  Prompt:
+
             From the identified security vulnerabilities and logic
             errors, provide line numbers, explain why they are a
             risk, and the best solution for them. Display your
@@ -110,6 +112,7 @@ TLDR:   Missing Upsert Logic, Database Connections,
 ### Prompts
 
 1.  Prompt:
+
             Design a calculator web application. Construct your response
             in an LLM prompt so that I can copy and paste it. Think like
             a senior software engineer and design it with system design
@@ -118,6 +121,7 @@ TLDR:   Missing Upsert Logic, Database Connections,
             the solution is non-obvious. Be sure to include all the
             details so the LLM will have all the context it needs to do
             as intended.
+
     -   Did well:   It did exactly what was asked of it. The resulting
                     LLM prompt had clear structure that allowed me to
                     determine if any changes should be made before
@@ -128,6 +132,7 @@ TLDR:   Missing Upsert Logic, Database Connections,
     -   I specified the copy and paste formatting that I wanted.
 
 2.  Prompt:
+
             Role: You are a Senior Full-Stack Engineer. Your task is to
             architect and implement a production-ready, responsive
             Calculator Web Application.
@@ -180,6 +185,7 @@ TLDR:   Missing Upsert Logic, Database Connections,
             index.html, styles.css, and script.js. Ensure the code is heavily
             commented with "Senior Developer" insights explaining why certain
             architectural choices (like the Command Pattern) were made.
+
     -   Did well:   It did exactly what was asked of it. The frontend
                     was designed well, and the LLM output respective
                     JavaScript, HTML, and CSS files. The code it produced
@@ -192,6 +198,7 @@ TLDR:   Missing Upsert Logic, Database Connections,
     -   In the next prompt, I specified these issues.
 
 3.  Prompt:
+
             There are a couple of things that need work.
             1. When dividing large numbers, unwanted floating-point decimals exist.
             2. The "Undo" and "Redo" buttons do not work.
@@ -201,6 +208,7 @@ TLDR:   Missing Upsert Logic, Database Connections,
             Think like a senior engineer and consider any possible edge cases that
             would cause unwanted behavior. Provide details on where to make the
             code changes or where to insert new code.
+
     -   Did well:   It did mostly what was asked of it. There were a few missing
                     details that I caught.
     -   Did poorly: There were a few missing details that I caught: it didn't
@@ -210,8 +218,10 @@ TLDR:   Missing Upsert Logic, Database Connections,
         prompt shorter to reduce the context to try and get a more direct result.
 
 4.  Prompt:
+
             Help me add the button 'data-negate', as well as event listener
             logic for undo and redo.
+
     -   Did well:   It did mostly what was asked of it.
     -   Did poorly: The only persisting bug left to fix is the floating-point
                     division issue.
@@ -219,12 +229,14 @@ TLDR:   Missing Upsert Logic, Database Connections,
         more specific context with the goal of getting a direct fix.
 
 5.  Prompt:
+
             The floating-point division is still incorrect for large numbers.
             Below is an example of what is happening. First, think about all
             the ways to solve this issue, then finalize on the best solution.
             Also, numbers ending in .0000 should remove the decimal.
 
             9^9 = 387420489 -> /9 = 43046720.99999999
+
     -   Did well:   It accomplished a working solution.
     -   Did poorly: Along with the correct solution, it provided already given
                     solutions from previous prompts.
