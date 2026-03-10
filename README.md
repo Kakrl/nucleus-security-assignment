@@ -54,7 +54,8 @@ TLDR:   Missing Upsert Logic, Database Connections,
 
 ## Follow-up Questions
 
-1.  Prompt: I am reviewing a Flask PR for a webhook endpoint. Below are
+1.  Prompt:
+            I am reviewing a Flask PR for a webhook endpoint. Below are
             the code and the requirements. Think like a senior engineer
             and indentify security vulnerabilities and logic errors.
 
@@ -73,7 +74,8 @@ TLDR:   Missing Upsert Logic, Database Connections,
         building off of this one.
     -   I didn't change my approach.
 
-2.  Prompt: From the identified security vulnerabilities and logic
+2.  Prompt:
+            From the identified security vulnerabilities and logic
             errors, provide line numbers, explain why they are a
             risk, and the best solution for them. Display your
             thoughts with clarity and go through each issue one by one.
@@ -107,7 +109,8 @@ TLDR:   Missing Upsert Logic, Database Connections,
 
 ### Prompts
 
-1.  Prompt: Design a calculator web application. Construct your response
+1.  Prompt:
+            Design a calculator web application. Construct your response
             in an LLM prompt so that I can copy and paste it. Think like
             a senior software engineer and design it with system design
             in mind. Keep the design simple so that an LLM can fully
@@ -124,7 +127,8 @@ TLDR:   Missing Upsert Logic, Database Connections,
                     structure of the numbered list and bullet points.
     -   I specified the copy and paste formatting that I wanted.
 
-2.  Prompt: Role: You are a Senior Full-Stack Engineer. Your task is to
+2.  Prompt:
+            Role: You are a Senior Full-Stack Engineer. Your task is to
             architect and implement a production-ready, responsive
             Calculator Web Application.
 
@@ -187,7 +191,8 @@ TLDR:   Missing Upsert Logic, Database Connections,
                     was the ability to input negative numbers.
     -   In the next prompt, I specified these issues.
 
-3.  Prompt: There are a couple of things that need work.
+3.  Prompt:
+            There are a couple of things that need work.
             1. When dividing large numbers, unwanted floating-point decimals exist.
             2. The "Undo" and "Redo" buttons do not work.
             3. The "Clear History" button does not work.
@@ -204,7 +209,8 @@ TLDR:   Missing Upsert Logic, Database Connections,
     -   I specified to update these things in the next prompt. I made the next
         prompt shorter to reduce the context to try and get a more direct result.
 
-4.  Prompt: Help me add the button 'data-negate', as well as event listener
+4.  Prompt:
+            Help me add the button 'data-negate', as well as event listener
             logic for undo and redo.
     -   Did well:   It did mostly what was asked of it.
     -   Did poorly: The only persisting bug left to fix is the floating-point
@@ -212,7 +218,8 @@ TLDR:   Missing Upsert Logic, Database Connections,
     -   I gave a concrete example of the issue in the next prompt to provide
         more specific context with the goal of getting a direct fix.
 
-5.  Prompt: The floating-point division is still incorrect for large numbers.
+5.  Prompt:
+            The floating-point division is still incorrect for large numbers.
             Below is an example of what is happening. First, think about all
             the ways to solve this issue, then finalize on the best solution.
             Also, numbers ending in .0000 should remove the decimal.
