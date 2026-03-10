@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architect Calc - Pro Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="history-sidebar">
+            <div class="sidebar-header">
+                <h3>Calculation History</h3>
+                <button id="export-btn" title="Export to .txt">↓ Export</button>
+            </div>
+            <ul id="history-list"></ul>
+            <button id="clear-history">Clear History</button>
+        </aside>
+
+        <main class="calculator-card">
+            <div class="display-container">
+                <div data-previous-operand class="previous-operand"></div>
+                <div data-current-operand class="current-operand">0</div>
+            </div>
+
+            <div class="keypad">
+                <button data-all-clear class="btn-accent">AC</button>
+                <button data-undo class="btn-secondary">Undo</button>
+                <button data-redo class="btn-secondary">Redo</button>
+                <button data-operation class="btn-operator">/</button>
+
+                <button data-number>7</button>
+                <button data-number>8</button>
+                <button data-number>9</button>
+                <button data-operation class="btn-operator">*</button>
+
+                <button data-number>4</button>
+                <button data-number>5</button>
+                <button data-number>6</button>
+                <button data-operation class="btn-operator">-</button>
+
+                <button data-number>1</button>
+                <button data-number>2</button>
+                <button data-number>3</button>
+                <button data-operation class="btn-operator">+</button>
+
+                <button data-number>0</button>
+                <button data-number>.</button>
+                <button data-negate class="btn-secondary">±</button>
+                <button data-operation class="btn-operator">^</button>
+                <button data-operation class="btn-operator">√</button>
+
+                <button data-operation class="btn-secondary">%</button>
+                <button data-delete class="btn-secondary">DEL</button>
+                <button data-equals class="btn-equals span-two">=</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
